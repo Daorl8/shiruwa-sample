@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://cafeshiruwa.pages.dev/">
 <link rel="canonical" href="https://cafeshiruwa.pages.dev/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23F6E8CF'/%3E%3Ccircle cx='11.5' cy='14.5' r='1.6' fill='%23262019'/%3E%3Ccircle cx='20.5' cy='14.5' r='1.6' fill='%23262019'/%3E%3Cpath d='M12 18.5 q4 3 8 0' stroke='%23262019' fill='none' stroke-width='1.7' stroke-linecap='round'/%3E%3Ccircle cx='9' cy='18' r='1.5' fill='%23EFA9BB'/%3E%3Ccircle cx='23' cy='18' r='1.5' fill='%23EFA9BB'/%3E%3C/svg%3E">
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
  --line:#EADDC7; --line2:#F0E7D6;
  --pink:#EFA9BB; --pink-d:#A8486A; --pink-soft:rgba(239,169,187,.16); --pink-mid:rgba(239,169,187,.34);
  --bar:76px; --ease:cubic-bezier(.34,1.2,.5,1);
- --disp:'Jua','Pretendard Variable',system-ui,sans-serif;
+ --disp:'Gaegu','Pretendard Variable',system-ui,sans-serif;
  --sans:'Pretendard Variable',system-ui,-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -138,7 +138,8 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .vrow .v{color:var(--ink)}
 .vrow .v .s{display:block;color:var(--ink2);font-size:.88rem;margin-top:3px}
 .visit-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:20px}
-.visit-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:26px}
+.visit-map{border-radius:26px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;min-height:300px;background:var(--cream)}
+.visit-map iframe{width:100%;height:100%;border:0;display:block}
 /* 링크(채널) */
 .links{text-align:center}
 .link-list{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -190,7 +191,6 @@ html.js .rv.in{opacity:1;transform:none}
     </a>
     <nav class="nav">
       <a href="#about">소개</a>
-      <a href="#menu">메뉴</a>
       <a href="#space">공간</a>
       <a href="#reserve">예약</a>
       <a href="#visit">오시는 길</a>
@@ -203,7 +203,6 @@ html.js .rv.in{opacity:1;transform:none}
 <div class="drawer" id="drawer">
   <button class="dx" id="dx" aria-label="닫기">&times;</button>
   <a href="#about">소개</a>
-  <a href="#menu">메뉴</a>
   <a href="#space">공간</a>
   <a href="#reserve">예약</a>
   <a href="#visit">오시는 길</a>
@@ -225,11 +224,11 @@ html.js .rv.in{opacity:1;transform:none}
       </div>
       <div class="hero-cta">
         <a class="btn btn-pink" href="https://linktr.ee/shiruwa" target="_blank" rel="noopener">주문·예약 바로가기</a>
-        <a class="btn" href="#menu">케이크 구경하기</a>
+        <a class="btn" href="#space">공간 둘러보기</a>
       </div>
     </div>
     <div class="hero-photo rv">
-      <img src="sh-hero.webp" alt="쉬러와의 제철 과일 쌀케이크" fetchpriority="high">
+      <img src="sh-hero.webp" alt="쉬러와의 제철 무화과 쌀케이크" fetchpriority="high">
       <div class="badge">쉬러와 쌀케이크<small>습식 쌀가루 · 담백한 크림</small></div>
     </div>
   </div>
@@ -240,7 +239,7 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="about about-inner" style="padding:56px 26px">
       <div class="about-grid rv">
-        <div class="about-photo"><img src="sh-story.webp" alt="쉬러와의 케이크와 음료"></div>
+        <div class="about-photo"><img src="sh-story.webp" alt="쉬러와의 제철 과일 음료"></div>
         <div class="about-copy">
           <span class="eyebrow">우리 이야기</span>
           <h2>편견을 깨는<br>담백한 쌀디저트</h2>
@@ -251,38 +250,6 @@ html.js .rv.in{opacity:1;transform:none}
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- MENU -->
-<section class="sec" id="menu">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Menu</span>
-      <h2>오늘의 쌀케이크</h2>
-      <p>제철 과일로 계절마다 바뀌는 쌀케이크와 음료. 홀케이크·조각·컵케이크까지 다양하게 준비했어요.</p>
-    </div>
-
-    <div class="mcat"><h3>쌀케이크</h3><span class="en">Rice Cake</span></div>
-    <div class="mgrid rv">
-      <figure class="mcard"><div class="ph"><img src="sh-cake-straw.webp" alt="딸기 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>딸기 생크림</b><span>제철 딸기 듬뿍</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-fruit.webp" alt="과일 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>제철 과일 케이크</b><span>그날의 신선한 과일</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-blue.webp" alt="블루베리 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>블루베리</b><span>상큼한 베리 가득</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-mango.webp" alt="망고 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>망고</b><span>부드러운 망고 크림</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-matcha.webp" alt="말차 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>말차</b><span>진한 말차의 담백함</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-flower.webp" alt="플라워 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>플라워 케이크</b><span>기념일 홀케이크</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-bear.webp" alt="곰돌이 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>곰돌이 케이크</b><span>아이들이 좋아하는</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-choco.webp" alt="초코 쌀케이크" loading="lazy"></div><figcaption class="cap"><b>초코</b><span>진하지만 담백하게</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-cake-mont.webp" alt="몽블랑 컵케이크" loading="lazy"></div><figcaption class="cap"><b>컵케이크</b><span>가볍게 즐기는 한 컵</span></figcaption></figure>
-    </div>
-
-    <div class="mcat"><h3>음료</h3><span class="en">Drinks</span></div>
-    <div class="mgrid rv">
-      <figure class="mcard"><div class="ph"><img src="sh-drink-latte.webp" alt="라떼" loading="lazy"></div><figcaption class="cap"><b>라떼</b><span>케이크와 잘 어울리는</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-drink-ice.webp" alt="아이스 아메리카노" loading="lazy"></div><figcaption class="cap"><b>아메리카노</b><span>깔끔한 기본</span></figcaption></figure>
-      <figure class="mcard"><div class="ph"><img src="sh-drink-berry.webp" alt="제철 과일 음료" loading="lazy"></div><figcaption class="cap"><b>제철 에이드</b><span>상큼한 계절 음료</span></figcaption></figure>
-    </div>
-    <p class="menu-note">※ 메뉴·가격은 계절과 재료에 따라 달라질 수 있어요. 자세한 메뉴는 네이버·인스타에서 확인해주세요.</p>
   </div>
 </section>
 
@@ -303,11 +270,11 @@ html.js .rv.in{opacity:1;transform:none}
         <span>🍽️ 4인 테이블</span>
       </div>
       <div class="ggrid rv">
-        <figure class="gfig feat2"><img src="sh-space-ext.webp" alt="쉬러와 외관" loading="lazy"></figure>
-        <figure class="gfig"><img src="sh-space-int.webp" alt="창가 좌석" loading="lazy"></figure>
-        <figure class="gfig"><img src="sh-space-table.webp" alt="테이블 위 디저트" loading="lazy"></figure>
-        <figure class="gfig"><img src="sh-space-autumn.webp" alt="가을 정원 풍경" loading="lazy"></figure>
-        <figure class="gfig"><img src="sh-space-night.webp" alt="저녁 야외공간" loading="lazy"></figure>
+        <figure class="gfig feat2"><img src="sh-space-ext.webp" alt="쉬러와 외관과 간판" loading="lazy"></figure>
+        <figure class="gfig"><img src="sh-space-int.webp" alt="핸드드립 커피 한 잔" loading="lazy"></figure>
+        <figure class="gfig"><img src="sh-space-table.webp" alt="접시에 담긴 제철 쌀케이크" loading="lazy"></figure>
+        <figure class="gfig"><img src="sh-space-autumn.webp" alt="창밖 가을 은행나무 풍경" loading="lazy"></figure>
+        <figure class="gfig"><img src="sh-space-night.webp" alt="노을 지는 쉬러와 정원" loading="lazy"></figure>
       </div>
     </div>
   </div>
@@ -359,7 +326,7 @@ html.js .rv.in{opacity:1;transform:none}
           <a class="btn" href="tel:0507-1452-1120">전화하기</a>
         </div>
       </div>
-      <div class="visit-photo"><img src="sh-space-ext.webp" alt="쉬러와 외관" loading="lazy"></div>
+      <div class="visit-map"><iframe title="쉬러와 위치 지도" src="https://maps.google.com/maps?q=강원특별자치도+춘천시+신북읍+지내고탄로+246&z=15&hl=ko&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
   </div>
 </section>
@@ -389,7 +356,7 @@ html.js .rv.in{opacity:1;transform:none}
       <img src="sh-logo.webp" alt="쉬러와 로고" width="60" height="60">
       <b>쉬러와 쌀케이크</b>
     </div>
-    <div class="fnav"><a href="#about">소개</a><a href="#menu">메뉴</a><a href="#space">공간</a><a href="#reserve">예약</a><a href="#visit">오시는 길</a></div>
+    <div class="fnav"><a href="#about">소개</a><a href="#space">공간</a><a href="#reserve">예약</a><a href="#visit">오시는 길</a><a href="#links">채널</a></div>
     <small>강원특별자치도 춘천시 신북읍 지내고탄로 246, 1·2층 · 0507-1452-1120<br>매일 11:00–19:00 (L.O 18:20) · 넓은 주차장 · 애견동반 야외공간</small>
   </div>
 </footer>
