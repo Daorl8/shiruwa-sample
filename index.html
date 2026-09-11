@@ -39,7 +39,7 @@ a{color:inherit;text-decoration:none}
 .disp{font-family:var(--disp)}
 h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--ink);letter-spacing:-.01em}
 .eyebrow{font-family:var(--disp);font-size:.95rem;color:var(--pink-d);letter-spacing:.02em}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 26px;font-family:var(--disp);font-size:1.02rem;border-radius:999px;border:2px solid var(--ink);color:var(--ink);background:transparent;transition:transform .18s var(--ease),background .2s,color .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 26px;font-family:var(--disp);font-size:1.02rem;border-radius:10px;border:2px solid var(--ink);color:var(--ink);background:transparent;transition:transform .18s var(--ease),background .2s,color .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(0)}
 .btn-fill{background:var(--ink);color:var(--cream)}
@@ -74,11 +74,11 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .hero h1 .pk{color:var(--pink-d)}
 .hero .lead{margin-top:16px;font-size:clamp(1.02rem,2.4vw,1.2rem);color:var(--ink2);max-width:30rem}
 .hero .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-.htag{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:600;color:var(--pink-d);background:var(--pink-soft);border-radius:999px;padding:7px 14px}
+.htag{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:600;color:var(--pink-d);background:var(--pink-soft);border-radius:7px;padding:7px 14px}
 .hero-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:11px}
 .hero-photo{position:relative}
-.hero-photo img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:28px;box-shadow:0 30px 50px -30px rgba(80,60,40,.5)}
-.hero-photo .badge{position:absolute;left:-14px;bottom:22px;background:var(--card);border-radius:18px;padding:12px 18px;box-shadow:0 14px 30px -18px rgba(80,60,40,.5);font-family:var(--disp);font-size:1.05rem;color:var(--ink)}
+.hero-photo img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:14px;box-shadow:0 30px 50px -30px rgba(80,60,40,.5)}
+.hero-photo .badge{position:absolute;left:-14px;bottom:22px;background:var(--card);border-radius:10px;padding:12px 18px;box-shadow:0 14px 30px -18px rgba(80,60,40,.5);font-family:var(--disp);font-size:1.05rem;color:var(--ink)}
 .hero-photo .badge small{display:block;font-family:var(--sans);font-size:.76rem;color:var(--ink2);font-weight:500}
 /* 섹션 공통 */
 .sec{padding:78px 0}
@@ -87,9 +87,9 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .sec-head h2{font-size:clamp(2rem,5vw,3rem)}
 .sec-head p{margin-top:14px;color:var(--ink2)}
 /* 소개 */
-.about{background:var(--cream);border-radius:40px;margin:0 12px}
+.about{background:var(--cream);border-radius:18px;margin:0 12px}
 .about-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:26px}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
 .about-copy .eyebrow{display:block;margin-bottom:10px}
 .about-copy h2{font-size:clamp(1.8rem,4.4vw,2.6rem);margin-bottom:16px}
 .about-copy p{color:var(--ink2);margin-bottom:14px}
@@ -110,40 +110,40 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .mcard .cap span{font-size:.84rem;color:var(--ink2)}
 .menu-note{text-align:center;color:var(--faint);font-size:.86rem;margin-top:4px}
 /* 공간 */
-.space{background:var(--cream);border-radius:40px;margin:0 12px}
+.space{background:var(--cream);border-radius:18px;margin:0 12px}
 .feat{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
-.feat span{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.92rem;color:var(--ink);background:var(--card);border-radius:999px;padding:9px 17px;border:1px solid var(--line)}
+.feat span{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.92rem;color:var(--ink);background:var(--card);border-radius:7px;padding:9px 17px;border:1px solid var(--line)}
 .ggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;grid-auto-flow:dense}
-.gfig{position:relative;overflow:hidden;border-radius:20px;background:var(--card);aspect-ratio:1}
+.gfig{position:relative;overflow:hidden;border-radius:12px;background:var(--card);aspect-ratio:1}
 .gfig img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
 .gfig:hover img{transform:scale(1.05)}
 /* 예약 안내 */
-.resv{background:var(--ink);color:var(--cream);border-radius:40px;margin:0 12px;position:relative;overflow:hidden}
+.resv{background:var(--ink);color:var(--cream);border-radius:18px;margin:0 12px;position:relative;overflow:hidden}
 .resv .sec-head h2{color:#fff}
 .resv .sec-head p{color:rgba(246,232,207,.75)}
 .resv .sec-head .eyebrow{color:var(--pink)}
 .rgrid{display:grid;grid-template-columns:1fr;gap:14px;max-width:760px;margin:0 auto}
-.rstep{background:rgba(255,255,255,.06);border:1px solid rgba(246,232,207,.16);border-radius:20px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.rstep{background:rgba(255,255,255,.06);border:1px solid rgba(246,232,207,.16);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
 .rstep .n{font-family:var(--disp);font-size:1.6rem;color:var(--pink);flex:none;line-height:1}
 .rstep b{font-family:var(--disp);font-size:1.15rem;color:#fff;display:block;margin-bottom:3px}
 .rstep p{color:rgba(246,232,207,.8);font-size:.94rem}
 .perks{max-width:760px;margin:22px auto 0;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
-.perks span{font-size:.86rem;color:var(--cream);background:rgba(239,169,187,.18);border-radius:999px;padding:8px 15px}
+.perks span{font-size:.86rem;color:var(--cream);background:rgba(239,169,187,.18);border-radius:7px;padding:8px 15px}
 /* 오시는 길 */
 .visit-grid{display:grid;grid-template-columns:1fr;gap:30px}
-.vcard{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .vrow{display:flex;gap:14px;padding:17px 22px;border-bottom:1px solid var(--line2)}
 .vrow:last-child{border-bottom:0}
 .vrow .k{flex:none;min-width:72px;font-family:var(--disp);font-size:.98rem;color:var(--pink-d)}
 .vrow .v{color:var(--ink)}
 .vrow .v .s{display:block;color:var(--ink2);font-size:.88rem;margin-top:3px}
 .visit-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:20px}
-.visit-map{border-radius:26px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;min-height:300px;background:var(--cream)}
+.visit-map{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;min-height:300px;background:var(--cream)}
 .visit-map iframe{width:100%;height:100%;border:0;display:block}
 /* 링크(채널) */
 .links{text-align:center}
 .link-list{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-.link-btn{display:flex;align-items:center;gap:14px;background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:16px 22px;font-family:var(--disp);font-size:1.12rem;transition:transform .18s var(--ease),background .2s,color .2s}
+.link-btn{display:flex;align-items:center;gap:14px;background:var(--card);border:2px solid var(--ink);border-radius:11px;padding:16px 22px;font-family:var(--disp);font-size:1.12rem;transition:transform .18s var(--ease),background .2s,color .2s}
 .link-btn:hover{transform:translateY(-3px);background:var(--ink);color:var(--cream)}
 .link-btn.pink{border-color:var(--pink);background:var(--pink);color:#3A2530}
 .link-btn.pink:hover{background:var(--pink-d);color:#fff}
@@ -151,7 +151,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .link-btn .ico svg{width:24px;height:24px}
 .link-btn .arr{margin-left:auto;opacity:.5}
 /* 푸터 */
-.foot{background:var(--cream);border-radius:40px 40px 0 0;margin:40px 12px 0;padding:52px 0 40px;text-align:center}
+.foot{background:var(--cream);border-radius:18px 18px 0 0;margin:40px 12px 0;padding:52px 0 40px;text-align:center}
 .foot .fmk{display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px}
 .foot .fmk img{width:60px;height:60px;border-radius:50%}
 .foot .fmk b{font-family:var(--disp);font-size:1.5rem}
@@ -159,7 +159,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.18;color:var(--in
 .foot small{display:block;color:var(--faint);font-size:.82rem;line-height:1.9;margin-top:8px}
 /* 모바일 퀵바 */
 .qbar{position:fixed;left:0;right:0;bottom:0;z-index:95;display:none;gap:9px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(251,245,234,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-.qbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;height:48px;border-radius:14px;font-family:var(--disp);font-size:1rem;border:2px solid var(--ink)}
+.qbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;height:48px;border-radius:9px;font-family:var(--disp);font-size:1rem;border:2px solid var(--ink)}
 .qbar .q1{background:var(--ink);color:var(--cream)}
 .qbar .q2{background:var(--pink);border-color:var(--pink);color:#3A2530}
 /* 리빌 (강제 재생) */
@@ -218,9 +218,9 @@ html.js .rv.in{opacity:1;transform:none}
       <h1>온 가족이 즐기는<br><span class="pk">춘천 쌀케이크</span></h1>
       <p class="lead">지역 쌀을 이웃 방앗간에서 빻은 습식 쌀가루로 만든, 속 편한 글루텐프리 쌀디저트. 달고 느끼함은 덜고 담백함만 담았어요.</p>
       <div class="tags">
-        <span class="htag">🌾 글루텐프리 쌀케이크</span>
-        <span class="htag">🐶 애견동반 야외공간</span>
-        <span class="htag">🅿️ 넓은 주차장</span>
+        <span class="htag">글루텐프리 쌀케이크</span>
+        <span class="htag">애견동반 야외공간</span>
+        <span class="htag">넓은 주차장</span>
       </div>
       <div class="hero-cta">
         <a class="btn btn-pink" href="https://linktr.ee/shiruwa" target="_blank" rel="noopener">주문·예약 바로가기</a>
@@ -244,7 +244,7 @@ html.js .rv.in{opacity:1;transform:none}
           <span class="eyebrow">우리 이야기</span>
           <h2>편견을 깨는<br>담백한 쌀디저트</h2>
           <p>담백하고 깔끔한 맛을 좋아하는 아들과, 치즈·초코를 좋아하는 딸. <b>온 가족이 한자리에 모여 모두가 즐거운 케이크</b>를 만들고 싶었어요.</p>
-          <p>쌀케이크를 만들며 디저트에 대한 생각이 바뀌었습니다. 소화가 잘 되는 <b>쫀득한 쌀시트</b>에 설탕·버터 같은 첨가물을 최소화해, 느끼함을 줄인 깔끔하고 담백한 크림이 쉬러와만의 매력입니다.</p>
+          <p>그런데 쌀케이크를 만들며 디저트에 대한 생각이 바뀌었습니다. 소화가 잘 되는 <b>쫀득한 쌀시트</b>에 설탕·버터 같은 첨가물을 최소화해, 느끼함을 줄인 깔끔하고 담백한 크림이 쉬러와만의 매력이에요.</p>
           <p>남녀노소 속 더부룩함 없이 편하게 즐기는 건강한 쌀디저트. 마시는 음료 한 잔, 케이크 한 입에도 정성을 담았습니다.</p>
           <span class="sign">— 춘천 대표 쌀케이크, 쉬러와</span>
         </div>
@@ -263,11 +263,11 @@ html.js .rv.in{opacity:1;transform:none}
         <p>초보운전도 편한 넓은 주차장, 반려견과 함께하는 1층 야외공간, 정자와 그네까지. 가족 모두 넉넉하게 머물다 가세요.</p>
       </div>
       <div class="feat rv">
-        <span>🅿️ 넓은 주차장</span>
-        <span>🐶 애견동반 1층 야외</span>
-        <span>🌿 야외 정자 · 그네</span>
-        <span>🪞 대형 거울</span>
-        <span>🍽️ 4인 테이블</span>
+        <span>넓은 주차장</span>
+        <span>애견동반 1층 야외</span>
+        <span>야외 정자 · 그네</span>
+        <span>대형 거울</span>
+        <span>4인 테이블</span>
       </div>
       <div class="ggrid rv">
         <figure class="gfig feat2"><img src="sh-space-ext.webp" alt="쉬러와 외관과 간판" loading="lazy"></figure>
@@ -295,11 +295,11 @@ html.js .rv.in{opacity:1;transform:none}
         <div class="rstep"><span class="n">당일</span><div><b>네이버 주문</b><p>당일 가능한 홀케이크를 확인하고 주문하세요.</p></div></div>
       </div>
       <div class="perks rv">
-        <span>🚗 픽업만 가능 (배달 불가)</span>
-        <span>✍️ 무료 레터링</span>
-        <span>💰 결제액 5% 적립</span>
-        <span>🥤 예약 시 음료 10% 할인</span>
-        <span>🧊 리뷰 남기면 무료 보냉포장</span>
+        <span>픽업만 가능 (배달 불가)</span>
+        <span>무료 레터링</span>
+        <span>결제액 5% 적립</span>
+        <span>예약 시 음료 10% 할인</span>
+        <span>리뷰 남기면 무료 보냉포장</span>
       </div>
     </div>
   </div>
@@ -363,8 +363,8 @@ html.js .rv.in{opacity:1;transform:none}
 
 <!-- 모바일 퀵바 -->
 <div class="qbar">
-  <a class="q1" href="tel:0507-1452-1120">📞 전화</a>
-  <a class="q2" href="https://linktr.ee/shiruwa" target="_blank" rel="noopener">🔗 주문·예약</a>
+  <a class="q1" href="tel:0507-1452-1120">전화</a>
+  <a class="q2" href="https://linktr.ee/shiruwa" target="_blank" rel="noopener">주문·예약</a>
 </div>
 
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
